@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 import java.time.LocalDate;
 
 @NoArgsConstructor
-@AllArgsConstructor
+//@AllArgsConstructor
 @Data
 public class ProjectDTO {
 
@@ -17,5 +17,9 @@ public class ProjectDTO {
     private UserDTO assignedManager;
     private LocalDate startDate;
     private LocalDate endDate;
+    private String projectDetail;
     private Status projectStatus;
+
+    public ProjectDTO(String springMvc, String pr001, UserDTO user1, LocalDate now, LocalDate localDate, String creatingControllers, Status status) {
+    }
 }
