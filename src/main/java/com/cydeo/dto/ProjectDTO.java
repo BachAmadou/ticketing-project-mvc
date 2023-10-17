@@ -20,6 +20,13 @@ public class ProjectDTO {
     private String projectDetail;
     private Status projectStatus;
 
-    public ProjectDTO(String springMvc, String pr001, UserDTO user1, LocalDate now, LocalDate localDate, String creatingControllers, Status status) {
+    public ProjectDTO(String projectName, String projectCode, UserDTO assignedManager, LocalDate startDate, LocalDate endDate, String projectDetail, Status projectStatus) {
+        this.projectName = projectName;
+        this.projectCode = projectCode;
+        this.assignedManager = assignedManager;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.projectDetail = projectDetail;
+        this.projectStatus = projectStatus;
     }
 }
