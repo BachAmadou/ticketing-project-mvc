@@ -75,6 +75,7 @@ import com.cydeo.dto.UserDTO;
 import com.cydeo.service.RoleService;
 import com.cydeo.service.UserService;
 import com.cydeo.service.impl.RoleServiceImpl;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -123,8 +124,8 @@ public class UserController {
 
     }
 
-    @PostMapping("/update")
-    public String updateUser(UserDTO user){
+    @PostMapping("/update/{username}")
+    public String updateUser(@PathVariable("username") String username, UserDTO user){
 
         userService.update(user);
 
