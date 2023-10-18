@@ -15,5 +15,6 @@ public interface UserService extends CrudService<UserDTO, String> {
 //    void deleteById(String username);
 
     List<UserDTO> findManagers();
+    List<UserDTO> findEmployees();
 
 }
